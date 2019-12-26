@@ -1,5 +1,13 @@
 # Open-Street-Map-Route-Planner
-A Route Planner designed using Open Street Maps. The project uses IO2D C++ Library for the map graphics rendering.
+A Route Planner designed using Open Street Maps[OSM](https://www.openstreetmap.de/). The project uses IO2D C++ Library for the map graphics rendering.A sample map is added to the project(map.png) for the visualization.
+
+**Brief Description of the Open Steet Map**
+The Open Street Map consists of three different kinds of major entities:
+**Node** : Most Basic element of an OSM. Each node is identified by an Id, its latitude and its longitude)
+**Way** :  Its an ordered List of Nodes that represents a feature in the map. This feature could be a road, or a boundary of a park
+           Each way has at least one 'tag' which denotes some information about the way.
+**Relation** : A relation is a combination of many different ways and nodes which has a specific importance on the map. 
+               Eg. A route relation which lists the ways that form a major highway, cycle route, or bus route.
 
 ## Dependencies for Running Locally
 * cmake >= 3.11.3
