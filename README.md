@@ -5,7 +5,7 @@ A Route Planner designed using Open Street Maps [OSM](https://www.openstreetmap.
 
 The Open Street Map consists of three different kinds of major entities:
 
-**Node** : Most Basic element of an OSM. Each node is identified by an Id, its latitude and its longitude).
+**Node** : Most Basic element of an OSM. Each node is identified by an Id, its latitude and its longitude.
 
 **Way** :  Its an ordered List of Nodes that represents a feature in the map. This feature could be a road, or a boundary of a park
            Each way has at least one 'tag' which denotes some information about the way.
