@@ -1,5 +1,5 @@
 # Open-Street-Map-Route-Planner
-A Route Planner designed using Open Street Maps[OSM](https://www.openstreetmap.de/). The project uses IO2D C++ Library for the map graphics rendering.A sample map is added to the project(map.png) for the visualization.
+A Route Planner designed using Open Street Maps [OSM](https://www.openstreetmap.de/). The project uses IO2D C++ Library for the map graphics rendering.A sample map is added to the project(map.png) for the visualization.
 
 **Brief Description of the Open Steet Map**
 The Open Street Map consists of three different kinds of major entities:
