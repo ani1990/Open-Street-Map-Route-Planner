@@ -10,7 +10,7 @@
 class RouteModel : public Model {
 
   public:
-    class Node : public Model::Node {
+    class Node : public Model::Node {   /* Public Inheritance, through Nested class : Access only the structure Node from the class Model */
       public:
         Node * parent = nullptr;
         float h_value = std::numeric_limits<float>::max();
@@ -20,6 +20,8 @@ class RouteModel : public Model {
 
         void FindNeighbors();
         float distance(Node other) const {
+   /* x and y here referes to x, y values of the current object instance defined with this class. other is a object instance of the structure Node of class A
+      So this function calculates the Euclidean Distance between the current node(x,y) and the node - other(x,y) */
             return std::sqrt(std::pow((x - other.x), 2) + std::pow((y - other.y), 2));
         }
 
