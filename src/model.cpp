@@ -40,7 +40,7 @@ static Model::Landuse::Type String2LanduseType(std::string_view type)
 Model::Model( const std::vector<std::byte> &xml )
 {
     LoadData(xml);
-
+    
     AdjustCoordinates();
 
     std::sort(m_Roads.begin(), m_Roads.end(), [](const auto &_1st, const auto &_2nd){
@@ -188,6 +188,8 @@ void Model::AdjustCoordinates()
     const auto min_x = lon2xm(m_MinLon);
     m_MetricScale = std::min(dx, dy);
     for( auto &node: m_Nodes ) {
+/* In the above for loop node index is used as reference iterator for m_Nodes. Reason being we want to change each node element inside the m_Nodes vector directly here in this
+   in this below code. when the reference is not used, then instead a copy of each m_Nodes element is created, instead of the changes reflected to the original m_Nodes vector*/
         node.x = (lon2xm(node.x) - min_x) / m_MetricScale;
         node.y = (lat2ym(node.y) - min_y) / m_MetricScale;        
     }
