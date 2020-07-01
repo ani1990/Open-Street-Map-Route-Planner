@@ -4,7 +4,9 @@
 RoutePlanner::RoutePlanner(RouteModel &model, float start_x, float start_y, float end_x, float end_y): m_Model(model){
 /* The object '&model' of class RouteModel is a reference object, a reference object can be initialized only once in the entire program. In case a reference object is present
    as an attribute in the constructor, then it needs to be initialized using initializer lists. Otherwise the reference object is already holding a garbage address and 
-   it is immutable and cannot be modified to another address here inside the constructor definition */
+   it is immutable and cannot be modified to another address here inside the constructor definition 
+   In the intializer list above an object(m_Model) of class RouteModel is created and assigned to the reference object &model
+   */
     // Convert inputs to percentage:
     start_x *= 0.01;
     start_y *= 0.01;
