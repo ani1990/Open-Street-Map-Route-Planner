@@ -1,7 +1,7 @@
 #include "route_model.h"
 #include <iostream>
 
-RouteModel::RouteModel(const std::vector<std::byte> &xml) : Model(xml) {
+RouteModel::RouteModel(const std::vector<std::byte> &xml) : Model(xml) {   // Here the Model constructor is called which is part of the Model Class which is inherited by Route Model!!
     // Create RouteModel nodes.
     int counter = 0;
     for (Model::Node node : this->Nodes()) {
