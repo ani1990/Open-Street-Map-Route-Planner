@@ -24,6 +24,7 @@ static std::optional<std::vector<std::byte>> ReadFile(const std::string &path)
 
     if( contents.empty() )
         return std::nullopt;
+    // Move Semantics : Efficient operation, instead of copying huge amount of data in a new data vector, transfer the ownership of the memory region !!
     return std::move(contents);
 }
 
@@ -49,6 +50,7 @@ int main(int argc, const char **argv)
         if( !data )
             std::cout << "Failed to read." << std::endl;
         else
+            // Move Semantics : Efficient operation, instead of copying huge amount of data in a new data vector, transfer the ownership of the memory region !!
             osm_data = std::move(*data);
     }
     
